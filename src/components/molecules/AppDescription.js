@@ -3,10 +3,10 @@ import styled from "styled-components"
 import colors from "assets/colors"
 
 const Root = styled.div`
-  margin: 0 auto;
+  margin: 12px;
 
   @media (min-width: 992px) {
-    padding: 40px;
+    padding: 24px;
   }
 `
 const Guide = styled.p`

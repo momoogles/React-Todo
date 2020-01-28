@@ -6,8 +6,8 @@ import AddForm from "components/molecules/AddForm"
 const Root = styled.div`
   background-color: ${colors.sub};
   min-width: calc(100% - 80px);
-  padding: 40px;
-  margin: auto;
+  padding: 24px;
+  margin: 12px;
   border-radius: 8px;
   box-shadow: 0 0 8px ${colors.stroke};
 
