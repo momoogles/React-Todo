@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Layout from "components/Layout"
-import TodoList from "components/organisms/TodoList"
+import Todo from "components/organisms/Todo"
 import AppDesc from "components/molecules/AppDescription"
 
 const FlexLayout = styled.div`
@@ -12,7 +12,7 @@ const FlexLayout = styled.div`
     flex-direction: row;
   }
 `
-const FlexTodoList = styled(TodoList)`
+const FlexTodo = styled(Todo)`
   background-color: black;
 `
 
@@ -21,7 +21,7 @@ function App() {
     <div className="root">
       <Layout>
         <FlexLayout>
-          <FlexTodoList />
+          <FlexTodo />
           <AppDesc />
         </FlexLayout>
       </Layout>

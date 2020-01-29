@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import colors from "assets/colors"
 import AddForm from "components/molecules/AddForm"
+import TaskList from "components/molecules/TaskList"
 
 const Root = styled.div`
   background-color: ${colors.sub};
@@ -16,12 +17,13 @@ const Root = styled.div`
   }
 `
 
-function TodoList() {
+function Todo() {
   return (
     <Root>
       <AddForm />
+      <TaskList />
     </Root>
   )
 }
 
-export default TodoList
+export default Todo

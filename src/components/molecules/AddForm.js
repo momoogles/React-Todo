@@ -1,6 +1,8 @@
-import React from "react"
+import React, { useState } from "react"
+import { connect } from "react-redux"
 import styled from "styled-components"
 import colors from "assets/colors"
+import { ACTION_TYPE } from "assets/constant"
 
 const Root = styled.div`
   display: flex;
@@ -25,13 +27,20 @@ const SubmitBtn = styled.button`
   font-size: 18px;
   font-weight: 600;
 `
-function AddForm() {
+function AddForm({ onAddTask }) {
+  const [text, setText] = useState("")
   return (
     <Root>
-      <Input type="text" />
-      <SubmitBtn>追加</SubmitBtn>
+      <Input type="text" onChange={e => setText(e.target.value)} />
+      <SubmitBtn onClick={() => onAddTask(text)}>追加</SubmitBtn>
     </Root>
   )
 }
 
-export default AddForm
+const mapDispatchToProps = dispatch => {
+  return {
+    onAddTask: text => dispatch({ type: ACTION_TYPE.ADD, text })
+  }
+}
+
+export default connect(null, mapDispatchToProps)(AddForm)
